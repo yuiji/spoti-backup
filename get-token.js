@@ -60,8 +60,8 @@ app.get('/callback', (req, res) => {
       const access_token = data.body['access_token']
 
       fs.writeFileSync('./.env', `
-        CLIENT_ID=${process.env.CLIENT_ID}\n
-        CLIENT_SECRET=${process.env.CLIENT_SECRET}\n
+        CLIENT_ID=${process.env.CLIENT_ID}
+        CLIENT_SECRET=${process.env.CLIENT_SECRET}
         ACCESS_TOKEN=${access_token}
       `)
 
